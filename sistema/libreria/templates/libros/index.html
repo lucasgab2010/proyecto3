@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Lista de libros
+{% endblock titulo %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        <a
+            name=""
+            id=""
+            class="btn btn-success"
+            href="{% url 'crear' %}"
+            role="button"
+            >Agregar libro</a
+        >
+        </div>
+    <div class="card-body">
+        <h4 class="card-title">libros</h4>
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Descripciòn</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="">
+                        
+                        <td>0</td>
+                        <td>Django</td>
+                        <td>Imagen.jpg</td>
+                        <td>libro que habla de django</td>
+                        <td> <a
+                            name=""
+                            id=""
+                            class="btn btn-info"
+                            href="{% url 'editar' %}"
+                            role="button"
+                            >Editar</a
+                        >
+                         | <a
+                            name=""
+                            id=""
+                            class="btn btn-danger"
+                            href=""
+                            role="button"
+                            >Borrar</a
+                         >
+                         </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">Footer</div>
+</div>
+
+{% endblock contenido %}
